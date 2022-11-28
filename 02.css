@@ -1,0 +1,533 @@
+
+@font-face {
+     font-family: yekan;
+     src:  url('../font/YekanBakh-Regular.woff')format('woff') ,local('Pacifico Regular'), local('Pacifico-Regular');
+}
+*{
+     margin: 0%;
+     padding: 0%;
+     box-sizing: border-box;
+     font-family: yekan;
+     font-family: 'Readex+Pro' , sans-serif;
+     
+
+} 
+
+.showcase{
+     position: absolute;
+     left: 0%;
+     width: 100%;
+     min-height: 100vh;
+     padding: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+     background: #111;
+     color: rgb(215, 215, 215);
+    
+     z-index: 2; 
+     transition: 0.8s;
+}
+.showcase video{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     opacity: 0.7;
+
+}
+.showcase.active{
+     left: 230px;
+     
+}
+.showcase header{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 50px;
+     padding: 40px 100px;
+     display: flex;
+     z-index: 1000;
+     align-items: center;
+     justify-content: space-between;
+     
+}
+.showcase header .logo{
+     cursor: none;
+     font-family: yekan;
+     text-decoration: none;
+     color: #fff;
+     font-size: 1.5em;
+
+     
+}
+.showcase header .logo b{
+     transition: 0.5s;
+}
+.showcase header .logo b:hover{
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+.showcase header .toggle{
+     position: relative;
+     width: 60px;
+     height: 60px;
+     background: url("../icon/dashboard.png");
+     background-repeat: no-repeat;
+     background-size: 30px;
+     background-position: center;
+     cursor: pointer;
+     opacity: 80%;
+     transition: 1s;
+}
+
+.showcase header .toggle.active{
+     background: url("../icon/close.png");
+     background-repeat: no-repeat;
+     background-size: 30px;
+     background-position: center;
+     opacity: 80%;
+     cursor: pointer;
+     transition: 1s;
+}
+
+
+.showcase .overlay{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     background: rgb(35, 46, 59);
+     mix-blend-mode: overlay;
+}
+.text{
+     position: relative;
+     z-index: 10;
+}
+.text h2{
+     font-size: 3.5em;
+     font-weight: 800;
+     line-height: 1em;
+     font-family: yekan;
+}
+.text h3{
+     font-size: 2em;
+     font-weight: 700;
+     line-height: 1em;
+     margin: 20px 0;
+     font-family: yekan;
+}
+.text p{
+     font-size: 1em;
+     margin: 20px 0;
+     font-weight: 400;
+     max-width: 700px;
+     font-family: yekan;
+}
+.text a{
+     display: inline-block;
+     font-size: 1.2em;
+     background: #fff;
+     padding: 10px 30px;
+     text-decoration: none;
+     color: #111;
+     margin-top: 10px;
+     letter-spacing: 1px;
+     transition: 0.5s;
+     font-family: yekan;
+}
+.text a:hover{
+     letter-spacing: 4px;
+     transition: 0.5s;
+}
+.social{
+     width: 10px;
+     height: 10px;
+     position: absolute;
+     bottom: 30px;
+     left: 12rem;
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+.social li{
+     list-style: none;
+     
+}
+
+.social li a{
+     display: inline-block;
+     filter: invert(1);
+     margin-right: 20px;
+     transform: scale(0.6);
+     transition: 0.2s;
+}
+.social li a img{
+     width: 30px;
+     height: 30px;
+     background-size: cover;
+}
+.social li a:hover{
+     transform: scale(0.8) translateY(-15px);
+}
+.menu{
+     background-color: rgb(255, 255, 255);
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 230px;
+     height: 100%;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     overflow-y: scroll;
+     padding: 5px;
+     
+}
+
+.menu .product{
+     position: relative;
+     display: block;
+     width: 200px;
+     margin: 5px;
+     padding: 5px;
+
+}
+.menu .product div{
+     position: relative;
+     display: grid;
+     width: 100%;
+     justify-content: space-evenly;
+     
+}
+.menu .product div img{
+     position: relative;
+     object-fit: contain;
+     width: 100%;
+     height: 100px;
+     
+}
+.menu .product div .come{
+     display: flex;
+     width: 100%;
+     height: 30px;
+     justify-content: space-between;
+}
+.menu .product div .come .btn{
+     width: 45%;
+     display: flex;
+     position: relative;
+     align-items: center;
+     justify-content: space-around;
+}
+.menu .product div .come a{
+     position: relative;
+     display: flex;
+     text-decoration: none;
+     color: #fff;
+     font-weight: bold;
+     font-size: 0.6em;
+     width: 40%;
+     height: 28px;
+     background-color: rgba(0, 219, 0, 0.747);
+     align-items: center;
+     justify-content: center;
+     border-radius: 2px;
+     margin: 2px;
+}
+.menu .product div .come .btn .comment.comment1{
+     display: flex;
+     background-color: #eeee;
+     align-items: center;
+     justify-content: center;
+     width: 30px;
+     height: 30px;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     margin: 2px;
+}
+.menu .product div .come .btn .comment{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 30px;
+     height: 30px;
+     border: none;
+     background-color: rgba(17, 17, 17, 0);
+     border-radius: 10px;
+     cursor: pointer;
+     margin: 2px;
+}
+.menu .product div .come .btn .share{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 30px;
+     height: 30px;
+     border: none;
+     background-color: rgba(17, 17, 17, 0);
+     border-radius: 10px;
+     cursor: pointer;
+     margin: 2px;
+}
+.menu .product div .come .btn .share.share1{
+     display: flex;
+     background-color: #eeee;
+     align-items: center;
+     justify-content: center;
+     width: 30px;
+     height: 30px;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     margin: 2px;
+}
+.menu .product div .come .btn .share .share_menu1{
+     position: absolute;
+     width: 30px;
+     height: 100px;
+     background-color: #eeee;
+     bottom: -105px;
+     border-radius: 10px;
+     z-index: 1;
+     box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+
+}
+
+.telegram{
+     position: absolute;
+     bottom: -35px;
+     left: 12px;
+     width: 20px;
+     height: 20px;
+     z-index: 1;
+     border: none;
+     background-image: url(../icon/telegram.png);
+     background-position: center;
+     background-size: contain;
+}
+
+.whatsapp{
+     position: absolute;
+     bottom: -65px;
+     left: 12px;
+     width: 20px;
+     height: 20px;
+     z-index: 1;
+     border: none;
+     background-image: url(../icon/whatsapp.png);
+     background-position: center;
+     background-size: contain;
+}
+
+.discord{
+     position: absolute;
+     bottom: -95px;
+     left: 12px;
+     width: 20px;
+     height: 20px;
+     z-index: 1;
+     border: none;
+     background-image: url(../icon/discord.png);
+     background-position: center;
+     background-size: contain;
+}
+.menu .product div .come .btn button img{
+     width: 20px;
+     height: 20px;
+     filter: invert(.7);
+}
+.menu .product div .comments{
+     width: 100%;
+     height: 60px;
+     margin-top: 5px;
+     display: list-item;
+     list-style: none;
+     justify-content: right;
+     overflow-y: hidden;
+     transition: 1s;
+}
+.menu .product div .comments.comments1{
+     width: 100%;
+     height: 160px;
+     margin-top: 5px;
+     display: list-item;
+     list-style: none;
+     justify-content: right;
+     overflow-y: auto;
+     transition: 1s;
+     
+}
+.comments1::-webkit-scrollbar{
+     display: none;
+}
+.menu .product div h6{
+     font-size: .7em;
+     font-weight: 100;
+     color: #797979;
+     margin: 5px;
+
+
+}
+.menu .product div .comments p{
+     font-size: .5em;
+     font-weight: bold;
+     color: #9b9b9b;
+     padding: 5px;
+     border: solid rgba(190, 190, 190, 0.501);
+     border-width: .5px 0;
+     margin-right: 10px;
+     word-wrap: break-word;
+     font-family: yekan;
+     
+}
+.menu .product div .incomment{
+     font-size: .55em;
+     font-weight: 100;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+     padding: 5px;
+     border-radius: 2px;
+     outline: none;
+     border: 1px solid #d7d7d7;
+     opacity: 0;
+     transition: 1s;
+}
+.menu .product div .incomment.incomment1{
+     font-size: .55em;
+     font-weight: 100;
+     width: 100%;
+     position: absolute;
+     bottom: -20px;
+     padding: 5px;
+     border-radius: 2px;
+     outline: none;
+     border: 1px solid #d7d7d7;
+     opacity: 1;
+     margin-bottom: 10px;
+     transition: 1s;
+}
+.menu .product div .send{
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     bottom: 2.5px;
+     left: 2.5px;
+     border-radius: 2px;
+     font-size: .5em;
+     color: #fff;
+     width: 40px;
+     background-color: cornflowerblue;
+     padding: 4px;
+     opacity: 0;
+     transition: 1s;
+}
+.menu .product div .send1{
+     position: absolute;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     bottom: -7px;
+     left: 2.5px;
+     border-radius: 2px;
+     font-size: .5em;
+     color: #fff;
+     width: 40px;
+     background-color: cornflowerblue;
+     padding: 4px;
+     opacity: 1;
+     transition: 1s;
+}
+::-webkit-scrollbar{
+     width: 10px;
+     background-color: rgb(255, 255, 255);
+     border-radius: 20px;
+     
+}
+
+::-webkit-scrollbar-thumb{
+     
+     background-color: rgb(255, 210, 210);
+     border-radius: 20px;
+}
+@media(max-width: 790px){
+     .showcase, .showcase header {
+          padding: 40px;
+          
+     }
+     .text h2 {
+          font-size: 1.8em;
+     }
+     .text h3{
+          font-size: 1em;
+     }
+     .text p{
+          font-size: 0.8em;
+     }
+}
+
+/* signin */
+
+.container{
+    display: grid;
+    position: relative;
+    text-align: center;
+    background-color: rgba(87, 86, 86, 0.575);
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    
+}
+.container .form{
+     position: relative;
+     display: grid;
+     margin: 50px 10px;
+     padding: 10px;
+     
+
+     
+}
+.container .form input{
+     border: none;
+     border-radius: 5px;
+     height: 35px;
+     background-color: rgba(17, 17, 17, 0.549);
+     color: #fff;
+     padding: 5px;
+}
+.container .form input:focus{
+     border: solid 2px rgba(255, 255, 255, 0.788);
+     outline: none;
+}
+.container .form label{
+     display: flex;
+     align-items: flex-end;
+     justify-content: right;
+}
+.container .form button{
+     margin: auto;
+     border-radius: 5px;
+     width: 100px;
+     height: 30px;
+     border: none;
+     background-color: rgba(255, 255, 255, 0.682);
+     margin-top: 30px;
+}
+.field-icon {
+     float: right;
+     margin-left: -25px;
+     margin-top: -25px;
+     position: relative;
+     z-index: 2;
+   }
